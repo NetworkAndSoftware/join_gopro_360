@@ -54,6 +54,7 @@ for group_id, group_files in groups.items():
         "-f", "concat", "-safe", "0",
         "-i", str(filelist_path),
         "-c", "copy",
+        "-ignore_unknown",
         "-map", "0:0", "-map", "0:1", "-map", "0:3", "-map", "0:5",
         str(temp_output)
     ], check=True)
